@@ -19,14 +19,12 @@ const Home = () => {
                                     <span className="text-teal-accent-400"></span>
                                 </h2>
                                 <p className="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                                    quae.
+                                    Learn to Program and Analyze Data with Python. Develop programs to gather, clean, analyze, and visualize data.
                                 </p>
                                 <a
                                     href="/"
                                     aria-label=""
-
+                                    className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
                                 >
                                     Learn more
                                     <svg
@@ -106,6 +104,185 @@ const Home = () => {
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                    <div>
+                        <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                            Brand new
+                        </p>
+                    </div>
+                    <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                        <span className="relative inline-block">
+                            <svg
+                                viewBox="0 0 52 24"
+                                fill="currentColor"
+                                className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                            >
+                                <defs>
+                                    <pattern
+                                        id="27df4f81-c854-45de-942a-fe90f7a300f9"
+                                        x="0"
+                                        y="0"
+                                        width=".135"
+                                        height=".30"
+                                    >
+                                        <circle cx="1" cy="1" r=".7" />
+                                    </pattern>
+                                </defs>
+                                <rect
+                                    fill="url(#27df4f81-c854-45de-942a-fe90f7a300f9)"
+                                    width="52"
+                                    height="24"
+                                />
+                            </svg>
+                            <span className="relative">The</span>
+                        </span>{' '}
+                        Free Online Courses
+                    </h2>
+                    <p className="text-base text-gray-700 md:text-lg">
+                        Our free online courses provide you with an affordable and flexible way to learn new skills and study new and emerging topics. Learn from Stanford instructors and industry experts at no cost to you.
+                    </p>
+                </div>
+                <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
+                    <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                        <div className="mr-4">
+                            <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                                <svg
+                                    className="w-10 h-10 text-deep-purple-accent-400"
+                                    stroke="currentColor"
+                                    viewBox="0 0 52 52"
+                                >
+                                    <polygon
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 className="mb-3 text-xl font-bold leading-5">Employee Progress Tracking</h6>
+                            <p className="mb-3 text-sm text-gray-900">
+                                Our customized progress tracking software will automatically provide up to date information on where your employees are within a course
+                            </p>
+                            <a
+                                href="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                        <div className="mr-4">
+                            <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                                <svg
+                                    className="w-10 h-10 text-deep-purple-accent-400"
+                                    stroke="currentColor"
+                                    viewBox="0 0 52 52"
+                                >
+                                    <polygon
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 className="mb-3 text-xl font-bold leading-5">
+                                Mobile Delivery
+                            </h6>
+                            <p className="mb-3 text-sm text-gray-900">
+                                We believe that training should be delivered where and when the customer needs it. That’s why, in addition to standard computer access, our courses can also be taken on tablets and smart phones.
+                            </p>
+                            <a
+                                href="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                        <div className="mr-4">
+                            <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                                <svg
+                                    className="w-10 h-10 text-deep-purple-accent-400"
+                                    stroke="currentColor"
+                                    viewBox="0 0 52 52"
+                                >
+                                    <polygon
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 className="mb-3 text-xl font-bold leading-5">
+                                Quality
+                            </h6>
+                            <p className="mb-3 text-sm text-gray-900">
+                                A well-designed and thought out course increases student engagement and retention. The quality of the content and delivery of our online training is second to none
+                            </p>
+                            <a
+                                href="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                        <div className="mr-4">
+                            <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                                <svg
+                                    className="w-10 h-10 text-deep-purple-accent-400"
+                                    stroke="currentColor"
+                                    viewBox="0 0 52 52"
+                                >
+                                    <polygon
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 className="mb-3 text-xl font-bold leading-5">
+
+                                Experience
+                            </h6>
+                            <p className="mb-3 text-sm text-gray-900">
+                                The owners of etraintoday.com have over 25 years of experience delivering high caliber training in the safety field, certifying many thousands of students.
+                            </p>
+                            <a
+                                href="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
                         </div>
                     </div>
                 </div>

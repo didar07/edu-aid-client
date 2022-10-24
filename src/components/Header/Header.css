@@ -1,0 +1,22 @@
+.nav img {
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 6px;
+}
+
+.nav {
+    background-color: blueviolet;
+    height: 80px;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-link:hover {
+    color: orange;
+}

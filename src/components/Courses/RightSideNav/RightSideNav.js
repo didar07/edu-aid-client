@@ -11,7 +11,7 @@ const RightSideNav = () => {
     return (
         <div>
 
-            <h2>right side nav {allCourse.length}</h2>
+            <h2 className='font-bold content-center mt-5 p-3 mr-16 mb-8 text-3xl text-center text-green-400 bg-slate-300 rounded-lg'>Courses Details are here</h2>
             {
                 allCourse.map(course => <CourseDetails
                     key={course._id} course={course}>

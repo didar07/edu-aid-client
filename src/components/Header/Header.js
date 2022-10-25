@@ -3,8 +3,16 @@ import { Link } from 'react-router-dom';
 import './Header.css'
 import { AuthContext } from '../../contexts/AuthProvider/Authprovider'
 import { FaUser } from 'react-icons/fa';
+import { error } from 'daisyui/src/colors/colorNames';
 const Header = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
     return (
         <nav className='nav flex justify-between'>
             <div className='flex align-middle'>
@@ -34,7 +42,10 @@ const Header = () => {
                 <Link className='nav-link mr-4' to='/faq'>Faq</Link>
                 {
                     user?.uid ?
-                        <span className='text-white'>{user?.displayName}</span>
+                        <>
+                            <button onClick={handleLogOut}>Log out</button>
+                            <span className='text-white'>{user?.displayName}</span>
+                        </>
                         :
                         <Link className='nav-link mr-4' to='/login'>Login</Link>
                 }

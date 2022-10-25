@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
 import { AuthContext } from '../../contexts/AuthProvider/Authprovider'
+import { FaUser } from 'react-icons/fa';
 const Header = () => {
     const { user } = useContext(AuthContext)
     return (
@@ -27,13 +28,25 @@ const Header = () => {
 
 
 
-            <div className='nav-link'>
-                <Link className='mr-4' to='/home'>Home</Link>
-                <Link className='mr-4' to='/course/:id'>Courses</Link>
-                <Link className='mr-4' to='/faq'>Faq</Link>
-                <Link className='mr-4' to='/login'>Login</Link>
-                <Link to='/blog'>Blog</Link>
-                <Link>{user?.displayName}</Link>
+            <div >
+                <Link className='nav-link mr-4' to='/home'>Home</Link>
+                <Link className='nav-link mr-4' to='/course/:id'>Courses</Link>
+                <Link className='nav-link mr-4' to='/faq'>Faq</Link>
+                {
+                    user?.uid ?
+                        <span className='text-white'>{user?.displayName}</span>
+                        :
+                        <Link className='nav-link mr-4' to='/login'>Login</Link>
+                }
+
+                <Link className='nav-link mr-4'>{
+                    user?.photoURL ? <img className='rounded' style={{ height: "40px" }} src={user?.photoURL2} alt="" />
+                        :
+                        <FaUser></FaUser>
+                }</Link>
+                <Link className='nav-link mr-4' to='/blog'>Blog</Link>
+                <Link className='nav-link mr-4'></Link>
+
             </div>
         </nav>
     );

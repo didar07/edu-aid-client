@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { AuthContext } from '../../contexts/AuthProvider/Authprovider';
+import { GoogleAuthProvider } from 'firebase/auth';
 const Login = () => {
+    const { providerLogin } = useContext(AuthContext)
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
+
     return (
         <div className='flex justify-evenly'>
             <div>
@@ -17,7 +31,7 @@ const Login = () => {
                 </form>
             </div>
             <div className='mt-20'>
-                <button className="btn btn-outline btn-dark mr-6"><FaGoogle></FaGoogle> Login with Google</button>
+                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-dark mr-6"><FaGoogle></FaGoogle> Login with Google</button>
                 <button className="btn btn-outline btn-dark"><FaGithub></FaGithub> Login with Github</button>
             </div>
         </div>

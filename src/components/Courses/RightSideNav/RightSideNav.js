@@ -1,12 +1,19 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import CourseDetails from './CourseDetails/CourseDetails';
 
 const RightSideNav = () => {
-    const course = useLoaderData()
-    console.log(course)
+    const allCourse = useLoaderData()
+    console.log(allCourse)
     return (
         <div>
-            <h2>right side nav {course.length}</h2>
+            <h2>right side nav {allCourse.length}</h2>
+            {
+                allCourse.map(course => <CourseDetails
+                    key={course._id} course={course}>
+
+                </CourseDetails>)
+            }
         </div>
     );
 };

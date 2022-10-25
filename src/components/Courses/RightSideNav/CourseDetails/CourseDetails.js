@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const CourseDetails = ({ course }) => {
-    const { details, image_url, title, rating, total_view } = course
+    const { details, image_url, title, rating, total_view, _id } = course
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -20,7 +21,7 @@ const CourseDetails = ({ course }) => {
 
                     <p>{details}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Get Premium Access</button>
+                        <button className="btn btn-primary"><Link to={`/course/${_id}`}>Get Premium Access</Link></button>
                     </div>
                 </div>
             </div>

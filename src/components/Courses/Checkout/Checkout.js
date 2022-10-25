@@ -6,7 +6,8 @@ const Checkout = () => {
     console.log(checkoutCourse)
     return (
         <div>
-            {checkoutCourse.length}
+            <h2 className='text-rose-500 text-center bg-sky-300 mx-28 mt-9 text-3xl font-bold rounded-lg p-4'>congratulation You are purchased this Course </h2>
+            <h2>{checkoutCourse.title}</h2>
         </div>
     );
 };

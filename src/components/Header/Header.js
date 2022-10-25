@@ -34,8 +34,6 @@ const Header = () => {
                 </div>
             </div>
 
-
-
             <div >
                 <Link className='nav-link mr-4' to='/home'>Home</Link>
                 <Link className='nav-link mr-4' to='/course/:id'>Courses</Link>
@@ -44,17 +42,16 @@ const Header = () => {
                     user?.uid ?
                         <>
                             <button className='text-white' onClick={handleLogOut}>Log out</button>
-                            <span className='text-white'>{user?.displayName}</span>
                         </>
                         :
                         <Link className='nav-link mr-4' to='/login'>Login</Link>
                 }
 
-                <Link className='nav-link mr-4'>{
+                <Link className='nav-link mr-4 mt-4'>{
                     user?.photoURL ?
-
-                        <img className='rounded' style={{ height: "40px" }} src={user?.photoURL} alt="" />
-
+                        <div className="tooltip tooltip-open tooltip-right" data-tip={user?.displayName}>
+                            <img className='rounded' style={{ height: "40px" }} src={user?.photoURL} alt="" />
+                        </div>
 
                         :
                         <FaUser></FaUser>

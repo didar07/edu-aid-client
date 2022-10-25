@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../contexts/AuthProvider/Authprovider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 const Login = () => {
 
-
+    const [error, setError] = useState('')
     const { providerLogin, signIn, githubLogin } = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider()
@@ -38,8 +38,13 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                form.reset()
+                setError('')
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
     }
 
     return (
@@ -53,6 +58,7 @@ const Login = () => {
                     <br />
                     <button className="btn btn-outline btn-primary">Login</button>
                     <br />
+                    <h2 className='text-2xl font-bold text-red-600'>{error}</h2>
                     <br />
                     <p>Dont have an account? <Link className='bg-sky-300 rounded p-1' to='/register'>Register Now</Link></p>
                 </form>

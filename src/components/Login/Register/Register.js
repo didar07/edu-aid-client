@@ -1,9 +1,11 @@
-import { error } from 'daisyui/src/colors';
-import React, { useContext } from 'react';
+
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/Authprovider';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+
+    const [error, setError] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -17,9 +19,13 @@ const Register = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                setError('')
                 form.reset()
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
     }
 
     return (
@@ -35,6 +41,8 @@ const Register = () => {
                 <input type="password" name='password' placeholder="enter your password" className="input input-bordered input-primary w-full max-w-xs mb-8" />
                 <br />
                 <button className="btn btn-outline btn-primary">Register</button>
+                <br />
+                <h2 className='text-2xl font-bold text-red-600'>{error}</h2>
             </form>
         </div>
     );

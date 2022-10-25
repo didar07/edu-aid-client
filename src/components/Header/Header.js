@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.css'
 import { AuthContext } from '../../contexts/AuthProvider/Authprovider'
 import { FaUser } from 'react-icons/fa';
-import { error } from 'daisyui/src/colors/colorNames';
+import ReactTooltip from 'react-tooltip';
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
 
@@ -43,7 +43,7 @@ const Header = () => {
                 {
                     user?.uid ?
                         <>
-                            <button onClick={handleLogOut}>Log out</button>
+                            <button className='text-white' onClick={handleLogOut}>Log out</button>
                             <span className='text-white'>{user?.displayName}</span>
                         </>
                         :
@@ -51,12 +51,15 @@ const Header = () => {
                 }
 
                 <Link className='nav-link mr-4'>{
-                    user?.photoURL ? <img className='rounded' style={{ height: "40px" }} src={user?.photoURL2} alt="" />
+                    user?.photoURL ? <ReactTooltip title={user?.displayName}>
+                        <img className='rounded' style={{ height: "40px" }} src={user?.photoURL} alt="" />
+                    </ReactTooltip>
                         :
                         <FaUser></FaUser>
                 }</Link>
                 <Link className='nav-link mr-4' to='/blog'>Blog</Link>
                 <Link className='nav-link mr-4'></Link>
+
 
             </div>
         </nav>

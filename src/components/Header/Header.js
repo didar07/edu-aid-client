@@ -51,9 +51,11 @@ const Header = () => {
                 }
 
                 <Link className='nav-link mr-4'>{
-                    user?.photoURL ? <ReactTooltip title={user?.displayName}>
+                    user?.photoURL ?
+
                         <img className='rounded' style={{ height: "40px" }} src={user?.photoURL} alt="" />
-                    </ReactTooltip>
+
+
                         :
                         <FaUser></FaUser>
                 }</Link>

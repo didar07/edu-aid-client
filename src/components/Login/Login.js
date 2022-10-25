@@ -16,10 +16,17 @@ const Login = () => {
             .catch(error => console.error(error))
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const form = event.target
+        const email = form.email.value
+        const password = form.password.value
+    }
+
     return (
         <div className='flex justify-evenly'>
             <div>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <h2 className='mt-5 text-center text-red-500 text-3xl font-semibold'>Please Login</h2>
                     <input type="email" name='email' placeholder="enter your email" className="input input-bordered input-primary w-full max-w-xs mb-5 mt-5" />
                     <br />
@@ -27,7 +34,8 @@ const Login = () => {
                     <br />
                     <button className="btn btn-outline btn-primary">Login</button>
                     <br />
-                    <p>Dont have an account? <Link to='/register'>Register Now</Link></p>
+                    <br />
+                    <p>Dont have an account? <Link className='bg-sky-300 rounded p-1' to='/register'>Register Now</Link></p>
                 </form>
             </div>
             <div className='mt-20'>

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
+import { AuthContext } from '../../contexts/AuthProvider/Authprovider'
 const Header = () => {
+    const { user } = useContext(AuthContext)
     return (
         <nav className='nav flex justify-between'>
             <div className='flex align-middle'>
@@ -31,6 +33,7 @@ const Header = () => {
                 <Link className='mr-4' to='/faq'>Faq</Link>
                 <Link className='mr-4' to='/login'>Login</Link>
                 <Link to='/blog'>Blog</Link>
+                <Link>{user?.displayName}</Link>
             </div>
         </nav>
     );

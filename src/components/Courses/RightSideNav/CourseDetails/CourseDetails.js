@@ -1,11 +1,14 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
+import { FaDownload, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CourseDetails = ({ course }) => {
+
     const { details, image_url, title, rating, total_view, _id } = course
     return (
+
         <div>
+            <button className='mt-5 mb-5 text-center text-2xl font-bold bg-purple-600 px-6 py-3 rounded-lg'>Download file <FaDownload></FaDownload></button>
             <div className="mr-20 card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={image_url} alt="Shoes" className="rounded-xl" />

@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Authprovider from './contexts/AuthProvider/Authprovider';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Authprovider>
-      <App />
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+
     </Authprovider>
   </React.StrictMode>
 );

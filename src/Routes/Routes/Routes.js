@@ -22,12 +22,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/course/:id',
                 element: <Courses></Courses>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({ params }) => fetch(`https://edu-aid-server.vercel.app/course/${params.id}`)
             },
             {
                 path: '/singleCourse/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleCourse/${params.id}`)
+                loader: ({ params }) => fetch(`https://edu-aid-server.vercel.app/singleCourse/${params.id}`)
             },
             {
                 path: '/faq',

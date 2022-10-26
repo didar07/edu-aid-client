@@ -6,7 +6,6 @@ const CourseDetails = ({ course }) => {
 
     const ref = React.createRef()
 
-
     const { details, image_url, title, rating, total_view, _id } = course
     return (
 

@@ -10,7 +10,7 @@ const LeftSideNav = () => {
             .then(data => setCourses(data))
     }, [])
     return (
-        <div>
+        <div className='lg:w-2/3 sm:w-full'>
             <h2 className='mx-36 text-3xl text-green-500 font-bold bg-slate-300 p-3 rounded ml-3 mt-5'>Our Available Courses lists Are Below</h2>
             <div>
                 {

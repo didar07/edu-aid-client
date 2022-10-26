@@ -41,7 +41,7 @@ const Header = () => {
 
                 <Link className='nav-link mr-4 mt-4'>{
                     user?.photoURL ?
-                        <div className="tooltip tooltip-open tooltip-right" data-tip={user?.displayName}>
+                        <div className="tooltip tooltip-left" data-tip={user?.displayName}>
                             <img className='rounded' style={{ height: "40px" }} src={user?.photoURL} alt="" />
                         </div>
 

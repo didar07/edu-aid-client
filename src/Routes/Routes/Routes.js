@@ -20,6 +20,10 @@ export const routes = createBrowserRouter([
                 element: <Home></Home>
             },
             {
+                path: '/',
+                element: <Home></Home>
+            },
+            {
                 path: '/course/:id',
                 element: <Courses></Courses>,
                 loader: ({ params }) => fetch(`https://edu-aid-server.vercel.app/course/${params.id}`)
